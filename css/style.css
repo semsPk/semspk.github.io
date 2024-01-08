@@ -502,3 +502,11 @@ height: 50px;
         height: 10%;
     }
 } */
+
+.container-wide{
+    max-width: 100%;
+    @media (min-width: 1000px){
+    max-width: 100vw;
+}
+
+}
