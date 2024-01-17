@@ -44,6 +44,39 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
 
+  <script>
+    // Set the date we're counting down to
+    const countDownDate = new Date("June 1, 2024 00:00:00").getTime();
+
+    // Update the countdown every 1 second
+    const x = setInterval(function () {
+      // Get the current date and time
+      const now = new Date().getTime();
+
+      // Calculate the remaining time
+      const distance = countDownDate - now;
+
+      // Calculate days, hours, minutes, and seconds
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the countdown
+      document.getElementById(
+        "countdown"
+      ).innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      // If the countdown is over, display a message
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+
   <body>
     <!-- Spinner Start -->
     <div
@@ -124,7 +157,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav ms-auto py-0">
             <a href="#" class="nav-item nav-link active">Home</a>
-            <a href="#about" class="nav-item nav-link">About</a>
+            <a href="#about" class="nav-item nav-link">Mission</a>
             <a href="#stories" class="nav-item nav-link">Stories</a>
             <!-- <a href="#pricing" class="nav-item nav-link">Pricing</a> -->
             <!-- <div class="nav-item dropdown">
@@ -360,7 +393,7 @@
         <div class="row g-5">
           <div class="col-lg-7">
             <div class="section-title position-relative pb-3 mb-5">
-              <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
+              <h5 class="fw-bold text-primary text-uppercase">Our Mission</h5>
               <h1 class="mb-0">
                 on a mission to help every household reduce their energy use by
                 an average 15%, reducing Pakistans carbon footptint
@@ -409,6 +442,27 @@
                 <h5 class="mb-2">Awards</h5>
                 <h4 class="text-primary mb-0">
                   National Innovation Award 2023
+                </h4>
+              </div>
+            </div>
+            <div
+              class="d-flex align-items-center mb-4 wow fadeIn"
+              data-wow-delay="0.6s"
+            >
+              <div
+                class="bg-primary d-flex align-items-center justify-content-center rounded"
+                style="width: 60px; height: 60px"
+              >
+                <i class="fa fa-bullseye text-white"></i>
+              </div>
+              <div class="ps-4">
+                <h5 class="mb-2">Prototype Ready</h5>
+                <h4 class="text-primary mb-0">
+                  Working towards initial Launch in
+                  <div
+                    style="font-size: 30px; color: gray"
+                    id="countdown"
+                  ></div>
                 </h4>
               </div>
             </div>
@@ -1307,8 +1361,8 @@
                     ><i class="bi bi-arrow-right text-primary me-2"></i>Home</a
                   >
                   <a class="text-light mb-2" href="#about"
-                    ><i class="bi bi-arrow-right text-primary me-2"></i>About
-                    Us</a
+                    ><i class="bi bi-arrow-right text-primary me-2"></i
+                    >Mission</a
                   >
                   <a class="text-light mb-2" href="#stories"
                     ><i class="bi bi-arrow-right text-primary me-2"></i
