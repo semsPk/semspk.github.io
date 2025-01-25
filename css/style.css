@@ -6,6 +6,70 @@
   --dark: #091e3e;
 }
 
+.vh-140 {
+  height: 70vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.f1 {
+  font-size: 3rem;
+  font-weight: 300 !important;
+}
+.tiddy-box {
+  border-radius: 12px 12px 12px 12px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  background-color: #ffffffc7;
+  justify-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  font-size: 10vh;
+  color: black !important;
+  /* width: ; */
+}
+.hover-Icon {
+  height: 200px;
+  width: 200px;
+  transition: all 0.5s ease; /* Smooth animation */
+}
+.hover-Icon:hover {
+  /* height: 250px;
+  width: 250px; */
+  border-radius: 15px;
+  background-color: #06a3da;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
+  transform: scale(1.1); /* Increases size smoothly */
+}
+
+.px-nav {
+  padding-right: 10rem !important;
+  padding-left: 10rem !important;
+}
+.nav-mob {
+}
+
+@media (max-width: 991.98px) {
+  .px-nav {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+  }
+  .nav-mob {
+    position: absolute;
+    z-index: 99999;
+    width: 100%;
+    background: #000000a8;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+  .vh-140 {
+    height: 100vh;
+  }
+  .tiddy-box {
+    display: none;
+  }
+}
+
 /*** Spinner ***/
 .spinner {
   width: 40px;
@@ -80,6 +144,7 @@ h6,
   font-family: "Rubik", sans-serif;
   font-weight: 600;
   transition: 0.5s;
+  border-radius: 10px;
 }
 
 .btn-primary,
@@ -133,13 +198,12 @@ h6,
 }
 
 .sticky-top.navbar-dark .navbar-nav .nav-link {
-  padding: 20px 0;
-  color: var(--dark);
+  /* color: var(--dark); */
 }
 .navbar-dark .navbar-nav .nav-link,
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: black;
+  /* color: var(--primary); */
 }
 
 /* .navbar-dark .navbar-brand h1 {
@@ -153,20 +217,18 @@ h6,
 
 @media (max-width: 991.98px) {
   .sticky-top.navbar-dark {
-    position: relative;
-    background: #ffffff;
   }
 
   .navbar-dark .navbar-nav .nav-link,
   .navbar-dark .navbar-nav .nav-link.show,
   .sticky-top.navbar-dark .navbar-nav .nav-link {
     padding: 10px 0;
-    color: var(--dark);
+    /* color: var(--dark); */
   }
 
-  /* .navbar-dark .navbar-brand h1 {
-        color: var(--primary);
-    } */
+  .navbar-dark .navbar-brand h1 {
+    color: var(--primary);
+  }
 }
 
 @media (min-width: 992px) {
@@ -175,13 +237,15 @@ h6,
     width: 100%;
     top: 0;
     left: 0;
-    border-bottom: 1px solid rgba(256, 256, 256, 0.1);
+    /* border-bottom: 1px solid rgba(256, 256, 256, .1); */
     z-index: 999;
   }
 
   .sticky-top.navbar-dark {
     position: fixed;
-    background: #ffffff;
+    background: #000000a8;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
   }
 
   .navbar-dark .navbar-nav .nav-link::before {
@@ -205,9 +269,9 @@ h6,
     display: none;
   }
 
-  /* .sticky-top.navbar-dark .navbar-brand h1 {
-        color: var(--primary);
-    } */
+  .sticky-top.navbar-dark .navbar-brand h1 {
+    color: var(--primary);
+  }
 }
 
 /*** Carousel ***/
@@ -533,7 +597,6 @@ h6,
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px 0px 90px 100px;
 
   @media (max-width: 900px) {
     padding: 30px;

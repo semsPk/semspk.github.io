@@ -63,55 +63,12 @@
       <div class="spinner"></div>
     </div>
     <!-- Spinner End -->
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-      <div class="row gx-0">
-        <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-          <div class="d-inline-flex align-items-center" style="height: 45px">
-            <small class="me-3 text-light"
-              ><i class="fa fa-map-marker-alt me-2"></i>NSTP Secretariat, NUST
-              Islamabad, Pakistan</small
-            >
-            <small class="me-3 text-light"
-              ><i class="fa fa-phone-alt me-2"></i>+92 3433 3788 08</small
-            >
-            <small class="text-light"
-              ><i class="fa fa-envelope-open me-2"></i>info@semspak.com</small
-            >
-          </div>
-        </div>
-        <div class="col-lg-4 text-center text-lg-end">
-          <div class="d-inline-flex align-items-center" style="height: 45px">
-            <!-- <a
-                     class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-                     href=""
-                     ><i class="fab fa-twitter fw-normal"></i
-                     ></a> -->
-            <a
-              class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              href="https://www.facebook.com/sems.pakistan?mibextid=kFxxJD"
-              target="_blank"
-              ><i class="fab fa-facebook-f fw-normal"></i
-            ></a>
-            <a
-              class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              href="https://www.linkedin.com/company/sems-iot"
-              ><i class="fab fa-linkedin-in fw-normal"></i
-            ></a>
-            <a
-              class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              href="https://www.instagram.com/sems.pk"
-              target="_blank"
-              ><i class="fab fa-instagram fw-normal"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Topbar End -->
     <!-- Navbar & Carousel Start -->
     <div class="container-fluid position-relative p-0">
-      <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+      <!-- Navbar Start -->
+      <nav
+        class="nav-mob navbar navbar-expand-lg navbar-dark px-nav py-3 py-lg-0"
+      >
         <a href="index.html" class="navbar-brand">
           <div style="display: flex; flex-direction: row">
             <img
@@ -132,155 +89,190 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav ms-auto py-0">
-            <a href="#" class="nav-item nav-link active">Home</a>
+            <a href="#" class="nav-item nav-link">Home</a>
             <a href="#about" class="nav-item nav-link">Mission</a>
             <a href="#stories" class="nav-item nav-link">News</a>
             <a href="#contact" class="nav-item nav-link">Contact</a>
           </div>
-          <butaton
-            type="button"
-            class="btn text-primary ms-3"
-            data-bs-toggle="modal"
-            data-bs-target="#searchModal"
-            ><i class="fa fa-search"></i
-          ></butaton>
+          <a href="#downloadApp" class="btn btn-primary py-2 px-4 ms-3"
+            >Download App</a
+          >
         </div>
       </nav>
-      <div
-        id="header-carousel"
-        class="carousel slide carousel-fade"
-        data-bs-ride="carousel"
-      >
+      <!-- Navbar End -->
+      <div class="carousel slide carousel-fade">
         <div class="carousel-inner">
           <div class="carousel-item active">
+            <img class="vh-140" src="img/ttbb.jpg" alt="Image" />
             <div
-              class="container-fluid py-5 wow fadeInUp"
-              data-wow-delay="0.1s"
+              class="carousel-caption d-flex flex-column align-items-center justify-content-center"
             >
-              <div class="container-wide py-5">
-                <div class="row g-5">
-                  <div
-                    class="col-lg-5 container_big_text"
-                    style="background-color: white"
-                  >
-                    <div class="section-title position-relative pb-3 mb-5">
-                      <h5 class="fw-bold text-primary text-uppercase">
-                        Smart Electric Meter System
-                      </h5>
-                      <h1 class="mb-0" style="font-size: 60px">
-                        Take command of your electricity usage!
-                      </h1>
-                    </div>
-                    <h5 style="font-size: 30px; color: gray">
-                      A view in to the devices using electricity in realtime,
-                      and a timeline of your usage activity from everywhare at
-                      or away from home
-                    </h5>
-                  </div>
-                  <div class="col-lg-7">
-                    <img
-                      class="w-100 h-100 rounded wow zoomIn"
-                      data-wow-delay="0.9s"
-                      src="img/sems_adv1.jpg"
-                      style="object-fit: contain"
-                      alt="SEMS Pakistan Smart Electric Meter - Real-time Monitoring, SEMS Pakistan offers IoT-based smart electric meters for real-time energy management, cost savings, and eco-friendly electricity usage."
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div
-              class="container-fluid py-5 wow fadeInUp"
-              data-wow-delay="0.1s"
-            >
-              <div class="container-wide py-5">
-                <div class="row g-5">
-                  <div
-                    class="col-lg-5 container_big_text"
-                    style="background-color: white"
-                  >
-                    <div class="section-title position-relative pb-3 mb-5">
-                      <h5 class="fw-bold text-primary text-uppercase">
-                        Smart Electric Meter System
-                      </h5>
-                      <h1 class="mb-0" style="font-size: 60px">
-                        Save Energy Go Green!
-                      </h1>
-                    </div>
-                    <h5 style="font-size: 30px; color: gray">
-                      Dive into Historical usage data, Comparisons charts and
-                      you progress towards the goals you set. save electricity
-                      Your self your country and become green
-                    </h5>
-                  </div>
-                  <div class="col-lg-7">
-                    <img
-                      class="w-100 h-100 rounded wow zoomIn"
-                      data-wow-delay="0.9s"
-                      src="img/sems_adv2.jpg"
-                      style="object-fit: contain"
-                      alt="SEMS Pakistan Smart Electric Meter - Real-time Monitoring, SEMS Pakistan offers IoT-based smart electric meters for real-time energy management, cost savings, and eco-friendly electricity usage."
-                    />
-                  </div>
-                </div>
+              <div class="p-3" style="max-width: 900px">
+                <h4 class="f1 text-white mb-md-4 animated zoomIn">
+                  Home Energy Management
+                </h4>
+                <h2 class="display-1 text-white mb-md-4 animated zoomIn">
+                  Made Easy
+                </h2>
               </div>
             </div>
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#header-carousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#header-carousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
     </div>
     <!-- Navbar & Carousel End -->
-    <!-- Full Screen Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1">
-      <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content" style="background: rgba(9, 30, 62, 0.7)">
-          <div class="modal-header border-0">
-            <button
-              type="button"
-              class="btn bg-white btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+
+    <!-- Facts Start -->
+    <div class="container-fluid facts py-5 pt-lg-0">
+      <div
+        class="container py-5 pt-lg-0 d-flex align-items-center justify-content-center"
+      >
+        <div class="tiddy-box">
+          <div class="wow zoomIn" data-wow-delay="0.1s">
+            <div
+              class="d-flex flex-column align-items-center justify-content-center p-4 hover-Icon"
+            >
+              <img src="img/Phone.svg" style="height: 80px" />
+              <h6 class="pt-4">Monitor Anywhere</h6>
+            </div>
           </div>
-          <div
-            class="modal-body d-flex align-items-center justify-content-center"
-          >
-            <div class="input-group" style="max-width: 600px">
-              <input
-                type="text"
-                class="form-control bg-transparent border-primary p-3"
-                placeholder="Type search keyword"
-              />
-              <button class="btn btn-primary px-4">
-                <i class="fa fa-search"></i>
-              </button>
+          <div class="wow zoomIn" data-wow-delay="0.1s">
+            <div
+              class="d-flex flex-column align-items-center justify-content-center py-4 hover-Icon"
+            >
+              <img src="img/Bell.svg" style="height: 80px" />
+              <h6 class="pt-4">Realtime Notifications</h6>
+            </div>
+          </div>
+          <div class="wow zoomIn" data-wow-delay="0.1s">
+            <div
+              class="d-flex flex-column align-items-center justify-content-center p-4 hover-Icon"
+            >
+              <img src="img/exclaim.svg" style="height: 80px" />
+              <h6 class="pt-4">Safety Alerts</h6>
+            </div>
+          </div>
+          <div class="wow zoomIn" data-wow-delay="0.1s">
+            <div
+              class="d-flex flex-column align-items-center justify-content-center p-4 hover-Icon"
+            >
+              <img src="img/Tool.svg" style="height: 80px" />
+              <h6 class="pt-4">Easy Installation</h6>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
-    <!-- Full Screen Search End -->
+    <!-- Facts Start -->
+    <!-- Carousel Start -->
+    <div class="container-fluid position-relative p-0">
+      <div class="container py-5">
+        <div
+          id="header-carousel"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div
+                class="container-fluid py-5 wow fadeInUp"
+                data-wow-delay="0.1s"
+              >
+                <div class="container-wide py-5">
+                  <div class="row g-5">
+                    <div
+                      class="col-lg-5 container_big_text"
+                      style="background-color: white"
+                    >
+                      <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-primary text-uppercase">
+                          Smart Electric Meter System
+                        </h5>
+                        <h1 class="mb-0" style="font-size: 60px">
+                          Take command of your electricity usage!
+                        </h1>
+                      </div>
+                      <h5 style="font-size: 30px; color: gray">
+                        A view in to the devices using electricity in realtime,
+                        and a timeline of your usage activity from everywhare at
+                        or away from home
+                      </h5>
+                    </div>
+                    <div class="col-lg-7">
+                      <img
+                        class="w-100 h-100 rounded wow zoomIn"
+                        data-wow-delay="0.9s"
+                        src="img/sems_adv1.jpg"
+                        style="object-fit: contain"
+                        alt="SEMS Pakistan Smart Electric Meter - Real-time Monitoring, SEMS Pakistan offers IoT-based smart electric meters for real-time energy management, cost savings, and eco-friendly electricity usage."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div
+                class="container-fluid py-5 wow fadeInUp"
+                data-wow-delay="0.1s"
+              >
+                <div class="container-wide py-5">
+                  <div class="row g-5">
+                    <div
+                      class="col-lg-5 container_big_text"
+                      style="background-color: white"
+                    >
+                      <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-primary text-uppercase">
+                          Smart Electric Meter System
+                        </h5>
+                        <h1 class="mb-0" style="font-size: 60px">
+                          Save Energy Go Green!
+                        </h1>
+                      </div>
+                      <h5 style="font-size: 30px; color: gray">
+                        Dive into Historical usage data, Comparisons charts and
+                        you progress towards the goals you set. save electricity
+                        Your self your country and become green
+                      </h5>
+                    </div>
+                    <div class="col-lg-7">
+                      <img
+                        class="w-100 h-100 rounded wow zoomIn"
+                        data-wow-delay="0.9s"
+                        src="img/sems_adv2.jpg"
+                        style="object-fit: contain"
+                        alt="SEMS Pakistan Smart Electric Meter - Real-time Monitoring, SEMS Pakistan offers IoT-based smart electric meters for real-time energy management, cost savings, and eco-friendly electricity usage."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#header-carousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#header-carousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Navbar & Carousel End -->
+
     <!-- Facts Start -->
     <div class="container-fluid facts py-5 pt-lg-0">
       <div class="container py-5 pt-lg-0">
@@ -565,7 +557,11 @@
     </div>
     <!-- Features end -->
     <!-- download Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div
+      class="container-fluid py-5 wow fadeInUp"
+      data-wow-delay="0.1s"
+      id="downloadApp"
+    >
       <div class="container py-5">
         <div
           class="section-title text-center position-relative pb-3 mb-5 mx-auto"
@@ -879,11 +875,6 @@
                 <a class="text-white border-bottom" href="#"
                   >Smart Electric Meter System</a
                 >. All Rights Reserved.
-                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                Designed by
-                <a class="text-white border-bottom" href="https://htmlcodex.com"
-                  >HTML Codex</a
-                >
               </p>
             </div>
           </div>
