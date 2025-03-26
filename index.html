@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<!-- chall mera puttar chuti karr -->
 <html lang="en">
   <head>
+    <meta charset="utf-8" />
     <title>
       SEMS Pakistan | Smart Electric Meter System | Save Energy & Go Green
     </title>
     <meta charset="utf-8" />
     <!-- Favicon -->
-    <link rel="sems" href="icon-min.png" type="image/x-icon" />
-    <link rel="sems icon" href="icon-min.png" type="image/x-icon" />
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="icon-min.png" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
@@ -19,7 +19,7 @@
       name="google-site-verification"
       content="MgUZIri6UUnPezAmDELbotCO0-LZndnEZXFHRERDOpo"
     />
-    <meta content="SEMS Pakistan" name="keywords" />
+    <meta content="SEMS Pakistan sems pk semsPK sems" name="keywords" />
     <meta
       name="description"
       content="SEMS Pakistan offers IoT-based smart electric meters for real-time energy management, cost savings, and eco-friendly electricity usage."
@@ -30,7 +30,7 @@
     />
     <meta
       property="og:description"
-      content="Real-time energy management for a greener tomorrow."
+      content="Real-time energy management for a greener tomorrow.SEMS Pakistan offers IoT-based smart electric meters for real-time energy management, cost savings, and eco-friendly electricity usage."
     />
     <meta
       property="og:image"
@@ -38,1232 +38,1012 @@
     />
     <meta property="og:url" content="https://semspk.github.io/sems_web/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    /> -->
+
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300&display=swap"
       rel="stylesheet"
     />
-    <!-- Icon Font Stylesheet -->
+
+    <!-- Vendor CSS Files -->
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- <link
-         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-         rel="stylesheet"
-         /> -->
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: iLanding
+  * Template URL: https://bootstrapmade.com/ilanding-bootstrap-landing-page-template/
+  * Updated: Nov 12 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
   </head>
-  <body>
-    <!-- Spinner Start -->
-    <div
-      id="spinner"
-      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-    >
-      <div class="spinner"></div>
-    </div>
-    <!-- Spinner End -->
-    <!-- Navbar & Carousel Start -->
-    <div class="container-fluid position-relative p-0">
-      <!-- Navbar Start -->
-      <nav
-        class="nav-mob navbar navbar-expand-lg navbar-dark px-nav py-3 py-lg-0"
-      >
-        <a href="index.html" class="navbar-brand">
-          <div style="display: flex; flex-direction: row">
-            <img
-              class="brand-img"
-              src="img/icon-min.png"
-              alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, SEMS icon main, sems logo, smart electric meter system"
-            />
-            <h1 style="font-size: 40px; padding-left: 10px">SEMS</h1>
-          </div>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-        >
-          <span class="fa fa-bars"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <div class="navbar-nav ms-auto py-0">
-            <a href="#" class="nav-item nav-link">Home</a>
-            <a href="#about" class="nav-item nav-link">About us</a>
-            <a href="#stories" class="nav-item nav-link">News</a>
-            <a href="#contact" class="nav-item nav-link">Contact</a>
-          </div>
-          <a href="#downloadApp" class="btn btn-primary py-2 px-4 ms-3"
-            >Download App</a
-          >
-        </div>
-      </nav>
-      <!-- Navbar End -->
-      <div class="carousel slide carousel-fade">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              class="vh-140"
-              src="img/ttbb.jpg"
-              alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, Image"
-            />
-            <div
-              class="carousel-caption d-flex flex-column align-items-center justify-content-center"
-            >
-              <div class="p-3" style="max-width: 900px">
-                <h4 class="f1 text-white mb-md-4 animated zoomIn">
-                  Home Energy Management
-                </h4>
-                <h2 class="display-1 text-white mb-md-4 animated zoomIn">
-                  Made Easy
-                </h2>
-                Real-time energy monitoring, instant alerts, and detailed usage
-                reports – all at your fingertips.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Navbar & Carousel End -->
 
-    <!-- Facts Start -->
-
-    <!-- <div class="container-fluid facts py-5 pt-lg-0">
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
       <div
-        class="container py-5 pt-lg-0 d-flex align-items-center justify-content-center"
+        class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
       >
-        <div class="tiddy-box">
-          <div class="wow zoomIn" data-wow-delay="0.1s">
-            <div
-              class="d-flex flex-column align-items-center justify-content-center p-4 hover-Icon"
-            >
-              <img src="img/Phone.svg" style="height: 80px" />
-              <h6 class="pt-4">Monitor Anywhere</h6>
-            </div>
-          </div>
-          <div class="wow zoomIn" data-wow-delay="0.1s">
-            <div
-              class="d-flex flex-column align-items-center justify-content-center py-4 hover-Icon"
-            >
-              <img src="img/Bell.svg" style="height: 80px" />
-              <h6 class="pt-4">Realtime Notifications</h6>
-            </div>
-          </div>
-          <div class="wow zoomIn" data-wow-delay="0.1s">
-            <div
-              class="d-flex flex-column align-items-center justify-content-center p-4 hover-Icon"
-            >
-              <img src="img/exclaim.svg" style="height: 80px" />
-              <h6 class="pt-4">Safety Alerts</h6>
-            </div>
-          </div>
-          <div class="wow zoomIn" data-wow-delay="0.1s">
-            <div
-              class="d-flex flex-column align-items-center justify-content-center p-4 hover-Icon"
-            >
-              <img src="img/Tool.svg" style="height: 80px" />
-              <h6 class="pt-4">Easy Installation</h6>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- Facts Start -->
-    <!-- Carousel Start -->
-    <div class="container-fluid position-relative p-0">
-      <div class="container py-5">
-        <div
-          id="header-carousel"
-          class="carousel slide carousel-fade"
-          data-bs-ride="carousel"
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
         >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div
-                class="container-fluid py-5 wow fadeInUp"
-                data-wow-delay="0.1s"
-              >
-                <div class="container-wide py-5">
-                  <div class="row g-5">
-                    <div
-                      class="col-lg-5 container_big_text"
-                      style="background-color: white"
-                    >
-                      <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">
-                          Smart Electric Meter System
-                        </h5>
-                        <h1 class="mb-0" style="font-size: 40px">
-                          Real-Time Electricity Monitoring
-                        </h1>
-                      </div>
-                      <h5 style="font-size: 30px; color: gray">
-                        Track volts, watts, and units in real-time to see
-                        exactly how much power you're using at any moment.
-                      </h5>
-                    </div>
-                    <div class="col-lg-7">
-                      <img
-                        class="w-100 h-100 rounded wow zoomIn"
-                        data-wow-delay="0.9s"
-                        src="img/mascot1.jpeg"
-                        style="object-fit: contain"
-                        alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, SEMS Pakistan Smart Electric Meter - Real-time Monitoring, SEMS Pakistan offers IoT-based smart electric meters for real-time energy management, cost savings, and eco-friendly electricity usage."
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div
-                class="container-fluid py-5 wow fadeInUp"
-                data-wow-delay="0.1s"
-              >
-                <div class="container-wide py-5">
-                  <div class="row g-5">
-                    <div
-                      class="col-lg-5 container_big_text"
-                      style="background-color: white"
-                    >
-                      <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">
-                          Smart Electric Meter System
-                        </h5>
-                        <h1 class="mb-0" style="font-size: 40px">
-                          Instant Mobile Alerts & Notifications
-                        </h1>
-                      </div>
-                      <h5 style="font-size: 30px; color: gray">
-                        Get immediate alerts on voltage fluctuations, overload
-                        risks, and unusual consumption to prevent high bills and
-                        electrical hazards.
-                      </h5>
-                    </div>
-                    <div class="col-lg-7">
-                      <img
-                        class="w-100 h-100 rounded wow zoomIn"
-                        data-wow-delay="0.9s"
-                        src="img/mascot1.jpeg"
-                        style="object-fit: contain"
-                        alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, SEMS Pakistan Smart Electric Meter - Real-time Monitoring, SEMS Pakistan offers IoT-based smart electric meters for real-time energy management, cost savings, and eco-friendly electricity usage."
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div
-                class="container-fluid py-5 wow fadeInUp"
-                data-wow-delay="0.1s"
-              >
-                <div class="container-wide py-5">
-                  <div class="row g-5">
-                    <div
-                      class="col-lg-5 container_big_text"
-                      style="background-color: white"
-                    >
-                      <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">
-                          Smart Electric Meter System
-                        </h5>
-                        <h1 class="mb-0" style="font-size: 40px">
-                          Easy Installation & User-Friendly App
-                        </h1>
-                      </div>
-                      <h5 style="font-size: 30px; color: gray">
-                        Simply plug and connect—no complex wiring needed! Our
-                        intuitive mobile app makes tracking your energy
-                        effortless.
-                      </h5>
-                    </div>
-                    <div class="col-lg-7">
-                      <img
-                        class="w-100 h-100 rounded wow zoomIn"
-                        data-wow-delay="0.9s"
-                        src="img/mascot1.jpeg"
-                        style="object-fit: contain"
-                        alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, SEMS Pakistan Smart Electric Meter - Real-time Monitoring, SEMS Pakistan offers IoT-based smart electric meters for real-time energy management, cost savings, and eco-friendly electricity usage."
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div
-                class="container-fluid py-5 wow fadeInUp"
-                data-wow-delay="0.1s"
-              >
-                <div class="container-wide py-5">
-                  <div class="row g-5">
-                    <div
-                      class="col-lg-5 container_big_text"
-                      style="background-color: white"
-                    >
-                      <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">
-                          Smart Electric Meter System
-                        </h5>
-                        <h1 class="mb-0" style="font-size: 40px">
-                          Affordable Pricing
-                        </h1>
-                      </div>
-                      <h5 style="font-size: 30px; color: gray">
-                        A cost-effective alternative to expensive foreign smart
-                        meters, designed to help you save money on electricity.
-                      </h5>
-                    </div>
-                    <div class="col-lg-7">
-                      <img
-                        class="w-100 h-100 rounded wow zoomIn"
-                        data-wow-delay="0.9s"
-                        src="img/mascot1.jpeg"
-                        style="object-fit: contain"
-                        alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, SEMS Pakistan Smart Electric Meter - Real-time Monitoring, SEMS Pakistan offers IoT-based smart electric meters for real-time energy management, cost savings, and eco-friendly electricity usage."
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div
-                class="container-fluid py-5 wow fadeInUp"
-                data-wow-delay="0.1s"
-              >
-                <div class="container-wide py-5">
-                  <div class="row g-5">
-                    <div
-                      class="col-lg-5 container_big_text"
-                      style="background-color: white"
-                    >
-                      <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">
-                          Smart Electric Meter System
-                        </h5>
-                        <h1 class="mb-0" style="font-size: 40px">
-                          Designed for Pakistan
-                        </h1>
-                      </div>
-                      <h5 style="font-size: 30px; color: gray">
-                        Built for Pakistan’s energy challenges, SEMS helps
-                        homes and businesses reduce waste, lower bills, and stay
-                        energy-efficient.
-                      </h5>
-                    </div>
-                    <div class="col-lg-7">
-                      <img
-                        class="w-100 h-100 rounded wow zoomIn"
-                        data-wow-delay="0.9s"
-                        src="img/mascot1.jpeg"
-                        style="object-fit: contain"
-                        alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, SEMS Pakistan Smart Electric Meter - Real-time Monitoring, SEMS Pakistan offers IoT-based smart electric meters for real-time energy management, cost savings, and eco-friendly electricity usage."
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#header-carousel"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#header-carousel"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Navbar & Carousel End -->
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <img
+            class="sitename"
+            src="./assets/img/icon-min.png"
+            alt="Smart Electric Meter System"
+            style="
+              border-radius: 50%;
+              box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+            "
+          />
+          <h1 style="font-weight: bolder">SEMS</h1>
+        </a>
 
-    <!-- Facts Start -->
-    <div class="container-fluid facts py-5 pt-lg-0">
-      <div class="container py-5 pt-lg-0">
-        <div class="row gx-0">
-          <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
-            <div
-              class="bg-primary shadow d-flex align-items-center justify-content-center p-4"
-              style="height: 150px"
-            >
-              <div
-                class="bg-white d-flex align-items-center justify-content-center rounded mb-2"
-                style="width: 60px; height: 60px"
-              >
-                <i class="fa fa-dollar-sign text-primary"></i>
-              </div>
-              <div class="ps-4">
-                <h5 class="text-white mb-0">Savings Upto</h5>
-                <h1 class="text-white mb-0" data-toggle="counter-up">7000</h1>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
-            <div
-              class="bg-light shadow d-flex align-items-center justify-content-center p-4"
-              style="height: 150px"
-            >
-              <div
-                class="bg-primary d-flex align-items-center justify-content-center rounded mb-2"
-                style="width: 60px; height: 60px"
-              >
-                <i class="fa fa-chart-line text-white"></i>
-              </div>
-              <div class="ps-4">
-                <h5 class="text-primary mb-0">Anual Savings</h5>
-                <h1 class="mb-0" data-toggle="counter-up">60,000</h1>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
-            <div
-              class="bg-primary shadow d-flex align-items-center justify-content-center p-4"
-              style="height: 150px"
-            >
-              <div
-                class="bg-white d-flex align-items-center justify-content-center rounded mb-2"
-                style="width: 60px; height: 60px"
-              >
-                <i class="fa fa-bolt text-primary"></i>
-              </div>
-              <div class="ps-4">
-                <h5 class="text-white mb-0">Save units upto</h5>
-                <h1 class="text-white mb-0" data-toggle="counter-up">400</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Facts Start -->
-    <!-- About Start -->
-    <div
-      id="about"
-      class="container-fluid py-5 wow fadeInUp"
-      data-wow-delay="0.1s"
-    >
-      <div class="container py-5">
-        <div class="row g-5">
-          <div class="col-lg-7">
-            <div class="section-title position-relative pb-3 mb-5">
-              <h5 class="fw-bold text-primary text-uppercase">About us</h5>
-              <h1 class="mb-0" style="font-size: 25px">
-                Our Mission is to make energy management affordable, accessible,
-                and efficient for every Pakistani home and business.
-              </h1>
-            </div>
-            <p class="mb-4">
-              SEMS was created to help households and businesses in Pakistan
-              track, manage, and optimize electricity usage. Our real-time
-              monitoring system reduces wastage and lowers costs. Recognized as
-              NSTP incubates, Jazz 5G Hackathon runners-up, and showcased at
-              Beaconhouse Innovative Solutions Exhibition, we are now part of
-              NICAT’s incubation program, gearing up to launch SEMS and
-              transform energy efficiency in Pakistan
-            </p>
-            <div class="row g-0 mb-3">
-              <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-                <h5 class="mb-3">
-                  <i class="fa fa-check text-primary me-3"></i>Greener Pakistan
-                </h5>
-                <h5 class="mb-3">
-                  <i class="fa fa-check text-primary me-3"></i>Reduced Bills
-                </h5>
-              </div>
-              <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                <h5 class="mb-3">
-                  <i class="fa fa-check text-primary me-3"></i>Safe Electricity
-                </h5>
-                <h5 class="mb-3">
-                  <i class="fa fa-check text-primary me-3"></i>Electricity For
-                  All
-                </h5>
-              </div>
-            </div>
-            <div
-              class="d-flex align-items-center mb-4 wow fadeIn"
-              data-wow-delay="0.6s"
-            >
-              <div
-                class="bg-primary d-flex align-items-center justify-content-center rounded"
-                style="width: 60px; height: 60px"
-              >
-                <i class="fa fa-trophy text-white"></i>
-              </div>
-              <div class="ps-4">
-                <h5 class="mb-2">Awards</h5>
-                <h4 class="text-primary mb-0">
-                  National Innovation Award 2023
-                </h4>
-              </div>
-            </div>
-            <div
-              class="d-flex align-items-center mb-4 wow fadeIn"
-              data-wow-delay="0.6s"
-            >
-              <div
-                class="bg-primary d-flex align-items-center justify-content-center rounded"
-                style="width: 60px; height: 60px"
-              >
-                <i class="fa fa-bullseye text-white"></i>
-              </div>
-              <div class="ps-4">
-                <h5 class="mb-2">Ready for Phase 1</h5>
-                <h4 class="text-primary mb-0">
-                  Get Your Hands on the Future: SEMS is now open for Testing
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-5" style="min-height: 500px">
-            <div class="position-relative h-100">
-              <img
-                class="position-absolute w-100 h-100 rounded wow zoomIn"
-                data-wow-delay="0.9s"
-                src="img/pak.png"
-                style="object-fit: contain"
-                alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, pakistans first Iot electric meter system, pakistan electric, sems partners, smart electric meter system sponsors, brands and collabrations"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- About end -->
-
-    <!-- journey Start -->
-    <div
-      id="journey"
-      class="container-fluid py-5 wow fadeInUp"
-      data-wow-delay="0.1s"
-    >
-      <div class="container py-5">
-        <div
-          class="section-title text-center position-relative pb-3 mb-5 mx-auto"
-          style="max-width: 600px"
-        >
-          <h1 class="mb-0">Our Journey</h1>
-        </div>
-        <div class="timeline">
+        <nav id="navmenu" class="navmenu">
           <ul>
-            <li>
-              <div class="right_content">
-                <h2>Founded – Tackling Pakistan’s Energy Crisis</h2>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About Us</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="btn-getstarted" href="contact.html">Contact Us</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Hero Section -->
+      <section
+        id="home"
+        class="hero section"
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        "
+      >
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="align-items-center" style="justify-items: center">
+            <div class="col-lg-9 text-center">
+              <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+                <h1 class="mb-4" style="color: rgba(0, 0, 0, 0.65)">
+                  Home Energy Management <br />
+                  Made Easy
+                </h1>
+
+                <p class="mb-4 mb-md-5">
+                  Real-time energy monitoring, instant alerts, and detailed
+                  usage reports – all at your fingertips.
+                </p>
+
+                <div class="hero-buttons">
+                  <a href="#download" class="btn btn-primary me-0 me-sm-2 mx-1"
+                    >Download Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="image-container">
+          <img class="video-waves" src="./assets/img/ttbb.jpg" />
+          <div class="image-gradient"></div>
+        </div>
+      </section>
+      <!-- /Hero Section -->
+
+      <!-- Clients Section -->
+      <section id="clients" class="clients section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                },
+                "breakpoints": {
+                  "320": {
+                    "slidesPerView": 2,
+                    "spaceBetween": 40
+                  },
+                  "480": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 60
+                  },
+                  "640": {
+                    "slidesPerView": 4,
+                    "spaceBetween": 80
+                  },
+                  "992": {
+                    "slidesPerView": 6,
+                    "spaceBetween": 120
+                  }
+                }
+              }
+            </script>
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img src="assets/img/clients/1x.png" class="img-fluid" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/2x.png" class="img-fluid" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/3x.png" class="img-fluid" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/4x.png" class="img-fluid" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/5x.png" class="img-fluid" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/6x.png" class="img-fluid" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/7x.png" class="img-fluid" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/8x.png" class="img-fluid" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/9x.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- /Clients Section -->
+
+      <!-- Features Section -->
+      <section id="features" class="features section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Why Smart Electric Meter System</h2>
+          <p>
+            The Pakistans only electricity management system recognised by
+            <a href="https://nstp.pk/">NSTP</a> ,
+            <a href="https://nicat.pk/">NICAT</a> and
+            <a href="https://pmyp.gov.pk/">PMNIA</a>
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="d-flex justify-content-center">
+            <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+              <li class="nav-item">
+                <a
+                  class="nav-link active show"
+                  data-bs-toggle="tab"
+                  data-bs-target="#features-tab-1"
+                >
+                  <h4>Real-Time Monitoring</h4>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#features-tab-2"
+                >
+                  <h4>Instant Alerts</h4>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#features-tab-3"
+                >
+                  <h4>Easy Installation</h4>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#features-tab-4"
+                >
+                  <h4>Affordable Pricing</h4>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#features-tab-5"
+                >
+                  <h4>Designed for Pakistan</h4>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+            <div class="tab-pane fade active show" id="features-tab-1">
+              <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center">
+                  <h3>Monitor electricity in Real Time</h3>
+                  <p class="fst-italic">
+                    Track volts, watts, and units in real-time to see exactly
+                    how much power you're using at any moment.
+                  </p>
+                </div>
+                <div class="col-lg-6 text-center">
+                  <img
+                    src="./assets/img/mascot1.jpeg"
+                    alt="Real-Time Monitoring"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="features-tab-2">
+              <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center">
+                  <h3>Instant Mobile Alerts & Notifications</h3>
+                  <p class="fst-italic">
+                    Get immediate alerts on voltage fluctuations, overload
+                    risks, and unusual consumption to prevent high bills and
+                    electrical hazards.
+                  </p>
+                </div>
+                <div class="col-lg-6 text-center">
+                  <img
+                    src="./assets/img/mascot1.jpeg"
+                    alt="Instant Alerts"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="features-tab-3">
+              <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center">
+                  <h3>Easy Installation & User-Friendly App</h3>
+                  <p class="fst-italic">
+                    Simply plug and connect—no complex wiring needed! Our
+                    intuitive mobile app makes tracking your energy effortless.
+                  </p>
+                </div>
+                <div class="col-lg-6 text-center">
+                  <img
+                    src="./assets/img/mascot1.jpeg"
+                    alt="Easy Installation"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="features-tab-4">
+              <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center">
+                  <h3>Affordable Pricing</h3>
+                  <p class="fst-italic">
+                    A cost-effective alternative to expensive foreign smart
+                    meters, designed to help you save money on electricity.
+                  </p>
+                </div>
+                <div class="col-lg-6 text-center">
+                  <img
+                    src="./assets/img/mascot1.jpeg"
+                    alt="Affordable Pricing"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="features-tab-5">
+              <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center">
+                  <h3>Designed for Pakistan</h3>
+                  <p class="fst-italic">
+                    Built for Pakistan’s energy challenges, SEMS helps homes and
+                    businesses reduce waste, lower bills, and stay
+                    energy-efficient.
+                  </p>
+                </div>
+                <div class="col-lg-6 text-center">
+                  <img
+                    src="./assets/img/mascot1.jpeg"
+                    alt="Designed for Pakistan"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features-2" class="features-2 section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>How Smart Electric Meter System Works</h2>
+          <p>Its a plug and play smart meter with a convenient App</p>
+        </div>
+        <!-- End Section Title -->
+        <div
+          class="container aos-init aos-animate"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="row align-items-center">
+            <div class="col-lg-4">
+              <div
+                class="feature-item text-end mb-5 aos-init aos-animate"
+                data-aos="fade-right"
+                data-aos-delay="200"
+              >
+                <div
+                  class="d-flex align-items-center justify-content-end gap-4"
+                >
+                  <div class="feature-content">
+                    <h3>Savings, made simple</h3>
+                    <p>
+                      SEMS helps you find opportunities to save from Day 1. Get
+                      tips on how to make your devices run more efficiently.
+                      People who use SEMS save, on average, 8% on their electric
+                      bill.
+                    </p>
+                  </div>
+                  <div class="feature-icon flex-shrink-0">
+                    <i class="bi bi-currency-dollar"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="feature-item text-end mb-5 aos-init aos-animate"
+                data-aos="fade-right"
+                data-aos-delay="300"
+              >
+                <div
+                  class="d-flex align-items-center justify-content-end gap-4"
+                >
+                  <div class="feature-content">
+                    <h3>Introducing Watt Check</h3>
+                    <p>
+                      A simple way to check how much energy your light bulbs
+                      consume. Flip the switch, and SEMS will help you find
+                      opportunities to save.
+                    </p>
+                  </div>
+                  <div class="feature-icon flex-shrink-0">
+                    <i class="bi bi-lightbulb"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="feature-item text-end aos-init aos-animate"
+                data-aos="fade-right"
+                data-aos-delay="400"
+              >
+                <div
+                  class="d-flex align-items-center justify-content-end gap-4"
+                >
+                  <div class="feature-content">
+                    <h3>Track your usage</h3>
+                    <p>
+                      See your usage month-to-date and what you’re trending
+                      towards. Is your energy usage higher than expected?
+                    </p>
+                  </div>
+                  <div class="feature-icon flex-shrink-0">
+                    <i class="bi bi-graph-up"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 aos-init aos-animate"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <div class="phone-mockup text-center">
+                <div
+                  id="phoneCarousel"
+                  class="carousel slide text-center"
+                  data-bs-ride="carousel"
+                  data-bs-interval="2000"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="./assets/img/mobile (1).png"
+                        alt="SEMS Mobile App"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./assets/img/mobile (2).png"
+                        alt="SEMS Mobile App"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./assets/img/mobile (3).png"
+                        alt="SEMS Mobile App"
+                        class="img-fluid"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Carousel Controls -->
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#phoneCarousel"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#phoneCarousel"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div
+                class="feature-item mb-5 aos-init aos-animate"
+                data-aos="fade-left"
+                data-aos-delay="200"
+              >
+                <div class="d-flex align-items-center gap-4">
+                  <div class="feature-icon flex-shrink-0">
+                    <i class="bi bi-phone"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h3>Monitor your home remotely</h3>
+                    <p>
+                      No matter where you are, SEMS’s easy-to-use mobile app
+                      will keep you informed on what’s happening in your home.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="feature-item mb-5 aos-init aos-animate"
+                data-aos="fade-left"
+                data-aos-delay="300"
+              >
+                <div class="d-flex align-items-center gap-4">
+                  <div class="feature-icon flex-shrink-0">
+                    <i class="bi bi-lightning"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h3>Smart Energy Insights</h3>
+                    <p>
+                      Get real-time analytics on your energy consumption. Know
+                      when to optimize your usage and save on your electric
+                      bill.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="feature-item aos-init aos-animate"
+                data-aos="fade-left"
+                data-aos-delay="400"
+              >
+                <div class="d-flex align-items-center gap-4">
+                  <div class="feature-icon flex-shrink-0">
+                    <i class="bi bi-file-earmark-bar-graph"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h3>Energy Efficiency Reports</h3>
+                    <p>
+                      Receive detailed reports on your energy habits, allowing
+                      you to make smarter, cost-effective decisions for your
+                      home.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Features Section -->
+
+      <!-- Call To Action Section -->
+      <section class="call-to-action section" id="download">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="row content justify-content-center align-items-center position-relative"
+          >
+            <div class="col-lg-8 mx-auto text-center">
+              <h2 class="display-4 mb-4">
+                Download the app to experience the power of SEMS
+              </h2>
+              <p class="mb-4">
+                Our app is currently in beta testing, and you have the chance to
+                be among the first to try it! download now and get early access
+                to the latest features before the official launch.
+              </p>
+              <a href="sems.apk" class="btn btn-cta">Download Now</a>
+            </div>
+
+            <!-- Abstract Background Elements -->
+            <div class="shape shape-1">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M47.1,-57.1C59.9,-45.6,68.5,-28.9,71.4,-10.9C74.2,7.1,71.3,26.3,61.5,41.1C51.7,55.9,35,66.2,16.9,69.2C-1.3,72.2,-21,67.8,-36.9,57.9C-52.8,48,-64.9,32.6,-69.1,15.1C-73.3,-2.4,-69.5,-22,-59.4,-37.1C-49.3,-52.2,-32.8,-62.9,-15.7,-64.9C1.5,-67,34.3,-68.5,47.1,-57.1Z"
+                  transform="translate(100 100)"
+                ></path>
+              </svg>
+            </div>
+
+            <div class="shape shape-2">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M41.3,-49.1C54.4,-39.3,66.6,-27.2,71.1,-12.1C75.6,3,72.4,20.9,63.3,34.4C54.2,47.9,39.2,56.9,23.2,62.3C7.1,67.7,-10,69.4,-24.8,64.1C-39.7,58.8,-52.3,46.5,-60.1,31.5C-67.9,16.4,-70.9,-1.4,-66.3,-16.6C-61.8,-31.8,-49.7,-44.3,-36.3,-54C-22.9,-63.7,-8.2,-70.6,3.6,-75.1C15.4,-79.6,28.2,-58.9,41.3,-49.1Z"
+                  transform="translate(100 100)"
+                ></path>
+              </svg>
+            </div>
+
+            <!-- Dot Pattern Groups -->
+            <div class="dots dots-1">
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <pattern
+                  id="dot-pattern"
+                  x="0"
+                  y="0"
+                  width="20"
+                  height="20"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+                </pattern>
+                <rect width="100" height="100" fill="url(#dot-pattern)"></rect>
+              </svg>
+            </div>
+
+            <div class="dots dots-2">
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <pattern
+                  id="dot-pattern-2"
+                  x="0"
+                  y="0"
+                  width="20"
+                  height="20"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+                </pattern>
+                <rect
+                  width="100"
+                  height="100"
+                  fill="url(#dot-pattern-2)"
+                ></rect>
+              </svg>
+            </div>
+
+            <div class="shape shape-3">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M43.3,-57.1C57.4,-46.5,71.1,-32.6,75.3,-16.2C79.5,0.2,74.2,19.1,65.1,35.3C56,51.5,43.1,65,27.4,71.7C11.7,78.4,-6.8,78.3,-23.9,72.4C-41,66.5,-56.7,54.8,-65.4,39.2C-74.1,23.6,-75.8,4,-71.7,-13.2C-67.6,-30.4,-57.7,-45.2,-44.3,-56.1C-30.9,-67,-15.5,-74,0.7,-74.9C16.8,-75.8,33.7,-70.7,43.3,-57.1Z"
+                  transform="translate(100 100)"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Call To Action Section -->
+
+      <!-- Features Cards Section -->
+      <section id="about" class="features-cards section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>About Us</h2>
+          <p>We have come a long way, lets be a part of our journey</p>
+        </div>
+        <!-- End Section Title -->
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-xl-3 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <div class="feature-box orange">
+                <i class="bi bi-lightbulb"></i>
+                <!-- Lightbulb icon for innovation -->
+                <h4>Founded – Tackling Pakistan’s Energy Crisis</h4>
                 <p>
                   Developed the idea to address Pakistan’s energy crisis with
                   smart electricity monitoring.
                 </p>
               </div>
-            </li>
-            <li>
-              <div class="right_content">
-                <h2>Recognized by PM National Innovation Award 🏆</h2>
+            </div>
+            <!-- End Feature Box -->
+
+            <div
+              class="col-xl-3 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <div class="feature-box blue">
+                <i class="bi bi-trophy"></i>
+                <!-- Trophy icon for recognition -->
+                <h4>Recognized by PM National Innovation Award 🏆</h4>
                 <p>
                   Acknowledged as a promising tech solution for energy
                   management.
                 </p>
               </div>
-            </li>
-            <li>
-              <div class="right_content">
-                <h2>Jazz 5G Hackathon (Runners-up) ⚡</h2>
+            </div>
+            <!-- End Feature Box -->
+
+            <div
+              class="col-xl-3 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <div class="feature-box green">
+                <i class="bi bi-lightning"></i>
+                <!-- Lightning icon for innovation in energy -->
+                <h4>Jazz 5G Hackathon (Runners-up) ⚡</h4>
                 <p>Showcased innovation in smart energy monitoring.</p>
               </div>
-            </li>
-            <li>
-              <div class="right_content">
-                <h2>Fast Innovation Hackathon 4.0 (Runners-up) 🚀</h2>
+            </div>
+            <!-- End Feature Box -->
+
+            <div
+              class="col-xl-3 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+            >
+              <div class="feature-box red">
+                <i class="bi bi-rocket"></i>
+                <!-- Rocket icon for fast innovation -->
+                <h4>Fast Innovation Hackathon 4.0 (Runners-up) 🚀</h4>
                 <p>
                   Secured runner-up position in Fast Innovation Hackathon 4.0,
                   demonstrating cutting-edge energy solutions.
                 </p>
               </div>
-            </li>
-            <li>
-              <div class="right_content">
-                <h2>Incubated at NSTP 🔬</h2>
+            </div>
+            <!-- End Feature Box -->
+          </div>
+
+          <div class="row gy-4" style="padding-top: 25px">
+            <div
+              class="col-xl-3 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="500"
+            >
+              <div class="feature-box orange">
+                <i class="bi bi-building"></i>
+                <!-- Building icon for incubation -->
+                <h4>Incubated at NSTP 🔬</h4>
                 <p>
                   Developed and refined our Minimum Viable Product (MVP) with
                   expert mentorship.
                 </p>
               </div>
-            </li>
-            <li>
-              <div class="right_content">
-                <h2>Beaconhouse Tech Exhibition 🎤</h2>
+            </div>
+            <!-- End Feature Box -->
+
+            <div
+              class="col-xl-3 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="600"
+            >
+              <div class="feature-box blue">
+                <i class="bi bi-person-lines-fill"></i>
+                <!-- Person icon for tech exhibition -->
+                <h4>Beaconhouse Tech Exhibition 🎤</h4>
                 <p>
                   Gained industry exposure and valuable insights from top tech
                   leaders.
                 </p>
               </div>
-            </li>
-            <li>
-              <div class="right_content">
-                <h2>Completed NSTP Incubation Successfully ✅</h2>
+            </div>
+            <!-- End Feature Box -->
+
+            <div
+              class="col-xl-3 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="700"
+            >
+              <div class="feature-box green">
+                <i class="bi bi-check-circle"></i>
+                <!-- Checkmark icon for completed incubation -->
+                <h4>Completed NSTP Incubation Successfully ✅</h4>
                 <p>Enhanced product functionality and market readiness.</p>
               </div>
-            </li>
-            <li>
-              <div class="right_content">
-                <h2>Incubated at NICAT 🚀</h2>
+            </div>
+            <!-- End Feature Box -->
+
+            <div
+              class="col-xl-3 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="800"
+            >
+              <div class="feature-box red">
+                <i class="bi bi-globe"></i>
+                <!-- Globe icon for international incubation -->
+                <h4>Incubated at NICAT 🚀</h4>
                 <p>
                   Preparing for market launch with the right guidance and
                   mentorship.
                 </p>
               </div>
-            </li>
-            <div style="clear: both"></div>
-          </ul>
-        </div>
-        <div
-          class="owl-carousel testimonial-carousel wow fadeInUp"
-          data-wow-delay="0.6s"
-        >
-          <div class="bg-light my-4">
-            <img
-              src="img/sems-act (1).jpg"
-              alt="sems pakistan, semspk, sems pk,
-            sems, smart electric meter system, our mobile app, android mobile
-            app, pakistans first Iot electric meter system, pakistan electric,
-            sems partners, smart electric meter system sponsors, brands and
-            collabrations"
-              style="
-                max-height: 400px;
-                object-fit: contain;
-                height: 400px;
-                padding: 20px;
-              "
-            />
+            </div>
+            <!-- End Feature Box -->
           </div>
+        </div>
+      </section>
+      <!-- /Features Cards Section -->
 
-          <div class="bg-light my-4">
-            <img
-              src="img/sems-act (2).jpg"
-              alt="sems pakistan, semspk, sems pk,
-            sems, smart electric meter system, our mobile app, android mobile
-            app, pakistans first Iot electric meter system, pakistan electric,
-            sems partners, smart electric meter system sponsors, brands and
-            collabrations"
-              style="
-                max-height: 400px;
-                object-fit: contain;
-                height: 400px;
-                padding: 20px;
-              "
-            />
-          </div>
-          <div class="bg-light my-4">
-            <img
-              src="img/sems-act (3).jpg"
-              alt="sems pakistan, semspk, sems pk,
-            sems, smart electric meter system, our mobile app, android mobile
-            app, pakistans first Iot electric meter system, pakistan electric,
-            sems partners, smart electric meter system sponsors, brands and
-            collabrations"
-              style="
-                max-height: 400px;
-                object-fit: contain;
-                height: 400px;
-                padding: 20px;
-              "
-            />
-          </div>
-          <div class="bg-light my-4">
-            <img
-              src="img/sems-act (4).jpg"
-              alt="sems pakistan, semspk, sems pk,
-            sems, smart electric meter system, our mobile app, android mobile
-            app, pakistans first Iot electric meter system, pakistan electric,
-            sems partners, smart electric meter system sponsors, brands and
-            collabrations"
-              style="
-                max-height: 400px;
-                object-fit: contain;
-                height: 400px;
-                padding: 20px;
-              "
-            />
-          </div>
-          <div class="bg-light my-4">
-            <img
-              src="img/sems-act (5).jpg"
-              alt="sems pakistan, semspk, sems pk,
-            sems, smart electric meter system, our mobile app, android mobile
-            app, pakistans first Iot electric meter system, pakistan electric,
-            sems partners, smart electric meter system sponsors, brands and
-            collabrations"
-              style="
-                max-height: 400px;
-                object-fit: contain;
-                height: 400px;
-                padding: 20px;
-              "
-            />
-          </div>
-          <div class="bg-light my-4">
-            <img
-              src="img/sems-act (6).jpg"
-              alt="sems pakistan, semspk, sems pk,
-            sems, smart electric meter system, our mobile app, android mobile
-            app, pakistans first Iot electric meter system, pakistan electric,
-            sems partners, smart electric meter system sponsors, brands and
-            collabrations"
-              style="
-                max-height: 400px;
-                object-fit: contain;
-                height: 400px;
-                padding: 20px;
-              "
-            />
-          </div>
-          <div class="bg-light my-4">
-            <img
-              src="img/sems-act (7).jpg"
-              alt="sems pakistan, semspk, sems pk,
-            sems, smart electric meter system, our mobile app, android mobile
-            app, pakistans first Iot electric meter system, pakistan electric,
-            sems partners, smart electric meter system sponsors, brands and
-            collabrations"
-              style="
-                max-height: 400px;
-                object-fit: contain;
-                height: 400px;
-                padding: 20px;
-              "
-            />
-          </div>
-          <div class="bg-light my-4">
-            <img
-              src="img/sems-act (8).jpg"
-              alt="sems pakistan, semspk, sems pk,
-            sems, smart electric meter system, our mobile app, android mobile
-            app, pakistans first Iot electric meter system, pakistan electric,
-            sems partners, smart electric meter system sponsors, brands and
-            collabrations"
-              style="
-                max-height: 400px;
-                object-fit: contain;
-                height: 400px;
-                padding: 20px;
-              "
-            />
-          </div>
-          <div class="bg-light my-4">
-            <img
-              src="img/sems-act (1).jfif"
-              alt="sems pakistan, semspk, sems
-            pk, sems, smart electric meter system, our mobile app, android
-            mobile app, pakistans first Iot electric meter system, pakistan
-            electric, sems partners, smart electric meter system sponsors,
-            brands and collabrations"
-              style="
-                max-height: 400px;
-                object-fit: contain;
-                height: 400px;
-                padding: 20px;
-              "
-            />
+      <!-- Clients Section -->
+      <section id="clients" class="clients section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 0,
+                "autoplay": {
+                  "delay": 5000000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                },
+                "breakpoints": {
+                  "320": {
+                    "slidesPerView": 2,
+                    "spaceBetween": 40
+                  },
+                  "480": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 60
+                  },
+                  "640": {
+                    "slidesPerView": 4,
+                    "spaceBetween": 80
+                  },
+                  "992": {
+                    "slidesPerView": 6,
+                    "spaceBetween": 120
+                  }
+                }
+              }
+            </script>
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/sems-act (1).jfif"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/sems-act (1).jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/sems-act (2).jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/sems-act (3).jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/sems-act (4).jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/sems-act (5).jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/sems-act (6).jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/sems-act (7).jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/sems-act (8).jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+      <!-- /Clients Section -->
+    </main>
 
-    <!-- journey End -->
-    <!-- Features Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-      <div class="container py-5">
-        <div
-          class="section-title text-center position-relative pb-3 mb-5 mx-auto"
-          style="max-width: 600px"
-        >
-          <h5 class="fw-bold text-primary text-uppercase">How SEMS works</h5>
-          <h1 class="mb-0">Its a plug and play meter with convenient App</h1>
-        </div>
-        <div class="row g-5">
-          <div class="col-lg-4">
-            <div class="row g-5">
-              <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
-                <div
-                  class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
-                  style="width: 60px; height: 60px"
-                >
-                  <i class="fa fa-cubes text-white"></i>
-                </div>
-                <h4>Savings, made simple</h4>
-                <p class="mb-0">
-                  SEMS helps you find opportunities to save from Day 1. Get tips
-                  on how to make your devices run more efficiently. People who
-                  use SEMS save, on average, 8% on their electric bill.
-                </p>
-              </div>
-              <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
-                <div
-                  class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
-                  style="width: 60px; height: 60px"
-                >
-                  <i class="fa fa-award text-white"></i>
-                </div>
-                <h4>Introducing Watt Check</h4>
-                <p class="mb-0">
-                  A simple way to check how much energy your light bulbs
-                  consume. Flip the switch and SEMS will help you find
-                  opportunities to save.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-lg-4 wow zoomIn"
-            data-wow-delay="0.9s"
-            style="min-height: 350px"
-          >
-            <div data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div
-                    class="position-relative"
-                    style="height: auto; width: 70%"
-                  >
-                    <img
-                      class="w-100 h-100"
-                      src="img/mobile (3).png"
-                      style="object-fit: cover"
-                      alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, our mobile app, android mobile app, pakistans first Iot electric meter system, pakistan electric, sems partners, smart electric meter system sponsors, brands and collabrations"
-                    />
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div
-                    class="position-relative"
-                    style="height: auto; width: 70%"
-                  >
-                    <img
-                      class="w-100 h-100"
-                      src="img/mobile (1).png"
-                      style="object-fit: cover"
-                      alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, our mobile app, android mobile app, pakistans first Iot electric meter system, pakistan electric, sems partners, smart electric meter system sponsors, brands and collabrations"
-                    />
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div
-                    class="position-relative"
-                    style="height: auto; width: 70%"
-                  >
-                    <img
-                      class="w-100 h-100"
-                      src="img/mobile (2).png"
-                      style="object-fit: cover"
-                      alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, our mobile app, android mobile app, pakistans first Iot electric meter system, pakistan electric, sems partners, smart electric meter system sponsors, brands and collabrations"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="row g-5">
-              <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
-                <div
-                  class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
-                  style="width: 60px; height: 60px"
-                >
-                  <i class="fa fa-users-cog text-white"></i>
-                </div>
-                <h4>Track your usage</h4>
-                <p class="mb-0">
-                  See your usage month-to-date and what you’re trending towards.
-                  Is your energy usage higher than you were expecting?
-                </p>
-              </div>
-              <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
-                <div
-                  class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
-                  style="width: 60px; height: 60px"
-                >
-                  <i class="fa fa-phone-alt text-white"></i>
-                </div>
-                <h4>
-                  Monitor your home from anywhere. Know what’s happening at any
-                  time.
-                </h4>
-                <p class="mb-0">
-                  No matter where you are, SEMS’s easy-to-use mobile app will
-                  keep you informed on what’s happening in your home
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Features end -->
-    <!-- download Start -->
-    <div
-      class="container-fluid py-5 wow fadeInUp"
-      data-wow-delay="0.1s"
-      id="downloadApp"
-    >
-      <div class="container py-5">
-        <div
-          class="section-title text-center position-relative pb-3 mb-5 mx-auto"
-          style="max-width: 600px"
-        >
-          <h5 class="fw-bold text-primary text-uppercase">Try It now</h5>
-          <h1 class="mb-0">Download and experience</h1>
-        </div>
-        <a
-          class="wow zoomIn d-flex align-items-center justify-content-center"
-          data-wow-delay="0.4s"
-          style="cursor: pointer"
-          href="sems.apk"
-        >
-          <div
-            class="d-flex align-items-center justify-content-center"
-            style="flex-direction: column"
-          >
-            <div
-              class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
-              style="width: 160px; height: 160px"
-            >
-              <i class="fa fa-download text-white" style="font-size: 80px"></i>
-            </div>
-            <h4>Download for Android</h4>
-            <p class="mb-0">
-              Download and install the app now to experinece SEMS!
-            </p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <!-- download end -->
-    <!-- Testimonial Start -->
-    <div
-      id="stories"
-      class="container-fluid py-5 wow fadeInUp"
-      data-wow-delay="0.1s"
-    >
-      <div class="container py-5">
-        <div
-          class="section-title text-center position-relative pb-3 mb-4 mx-auto"
-          style="max-width: 600px"
-        >
-          <h5 class="fw-bold text-primary text-uppercase">News and Reports</h5>
-          <h1 class="mb-0">'If not us, then who?If not now, then when?'</h1>
-          <h5 style="color: gray">John Lewis</h5>
-        </div>
-        <div
-          class="owl-carousel testimonial-carousel wow fadeInUp"
-          data-wow-delay="0.6s"
-        >
-          <a
-            href="https://www.thefastmode.com/technology-solutions/34214-bluecurrent-spark-reach-milestone-of-1m-iot-connections-in-new-zealand"
-            target="_blank"
-          >
-            <div class="testimonial-item bg-light my-4">
-              <div
-                class="d-flex align-items-center border-bottom pt-5 pb-4 px-5"
-              >
-                <h3 class="m-0">
-                  <i class="fa fa-newspaper text-primary"></i>
-                </h3>
-                <div class="ps-4">
-                  <h4 class="text-primary mb-1">The Fast Mode</h4>
-                  <small class="text-uppercase">20-12-2023</small>
-                </div>
-              </div>
-              <div class="pt-4 pb-5 px-5" style="color: gray">
-                NewZeland Spark announced a milestone of one million smart IoT
-                connections for Bluecurrent’s (formerly Vector Metering) smart
-                electricity meter network.
-              </div>
-            </div>
-          </a>
-          <a
-            href="https://timesofindia.indiatimes.com/gadgets-news/airtel-partners-with-intellismart-to-power-smart-metres-in-india/articleshow/106188960.cms"
-            target="_blank"
-          >
-            <div class="testimonial-item bg-light my-4">
-              <div
-                class="d-flex align-items-center border-bottom pt-5 pb-4 px-5"
-              >
-                <h3 class="m-0">
-                  <i class="fa fa-newspaper text-primary"></i>
-                </h3>
-                <div class="ps-4">
-                  <h4 class="text-primary mb-1">Times of India</h4>
-                  <small class="text-uppercase">23-12-2023</small>
-                </div>
-              </div>
-              <div class="pt-4 pb-5 px-5" style="color: gray">
-                The Government of India has a vision of replacing 250 million
-                conventional meters with Smart Meters in the next five years as
-                part of the AMI initiative. Airtel-5g to play a pivotal role in
-                enabling this vision.
-              </div>
-            </div>
-          </a>
-          <a href="https://www.dawn.com/news/1795120" target="_blank">
-            <div class="testimonial-item bg-light my-4">
-              <div
-                class="d-flex align-items-center border-bottom pt-5 pb-4 px-5"
-              >
-                <h3 class="m-0">
-                  <i class="fa fa-newspaper text-primary"></i>
-                </h3>
-                <div class="ps-4">
-                  <h4 class="text-primary mb-1">Dawn News</h4>
-                  <small class="text-uppercase">5-12-2023</small>
-                </div>
-              </div>
-              <div class="pt-4 pb-5 px-5" style="color: gray">
-                Nepra inquiry reveals ‘not a single’ distribution company
-                carrying out correct billing • Over 13m charged for more than 30
-                days of electricity usage; 0.4m sent average bills due to faulty
-                meters
-              </div>
-            </div>
-          </a>
-          <a
-            href="https://www.trade.gov/country-commercial-guides/pakistan-renewable-energy#:~:text=According%20to%20National%20Electric%20Power,%2C%20and%209%25%20from%20nuclear."
-            target="_blank"
-          >
-            <div class="testimonial-item bg-light my-4">
-              <div
-                class="d-flex align-items-center border-bottom pt-5 pb-4 px-5"
-              >
-                <h3 class="m-0">
-                  <i class="fa fa-newspaper text-primary"></i>
-                </h3>
-                <div class="ps-4">
-                  <h4 class="text-primary mb-1">
-                    International Trade Administration
-                  </h4>
-                  <small class="text-uppercase">12-1-2024</small>
-                </div>
-              </div>
-              <div class="pt-4 pb-5 px-5" style="color: gray">
-                According to National Electric Power Regulatory Authority’s
-                (NEPRA) 2022 yearly report, Pakistan’s 59% of energy comes from
-                thermal (fossil fuels).
-              </div>
-            </div>
-          </a>
-          <a
-            href="https://kashmirlife.net/electricity-bills-to-be-cheaper-after-smart-meter-installation-lg-sinha-324473/"
-            target="_blank"
-          >
-            <div class="testimonial-item bg-light my-4">
-              <div
-                class="d-flex align-items-center border-bottom pt-5 pb-4 px-5"
-              >
-                <h3 class="m-0">
-                  <i class="fa fa-newspaper text-primary"></i>
-                </h3>
-                <div class="ps-4">
-                  <h4 class="text-primary mb-1">Global News Kashmeer</h4>
-                  <small class="text-uppercase">5-8-2023</small>
-                </div>
-              </div>
-              <div class="pt-4 pb-5 px-5" style="color: gray">
-                Electricity Bills To Be Cheaper After Installation of 5g powered
-                Smart electricity Meter throught kashmeer in comming years
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <!-- Vendor Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-      <div class="container py-5 mb-5">
-        <div class="bg-white">
-          <div class="owl-carousel vendor-carousel">
-            <img
-              src="img/1x.png"
-              alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, code for pakistan our partner logo, sems partners, smart electric meter system sponsors, brands and collabrations"
-            />
-            <img
-              src="img/2x.png"
-              alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, huawei our partner logo, sems partners, smart electric meter system sponsors, brands and collabrations"
-            />
-            <img
-              src="img/3x.png"
-              alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, oppo our partner logo, sems partners, smart electric meter system sponsors, brands and collabrations"
-            />
-            <img
-              src="img/4x.png"
-              alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, NITB our partner logo, sems partners, smart electric meter system sponsors, brands and collabrations"
-            />
-            <img
-              src="img/5x.png"
-              alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, NUST national univeristy of science and techlology our partner logo, sems partners, smart electric meter system sponsors, brands and collabrations"
-            />
-            <img
-              src="img/6x.png"
-              alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, jazz pakistan jazz 5g our partner logo, sems partners, smart electric meter system sponsors, brands and collabrations"
-            />
-            <img
-              src="img/7x.png"
-              alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, NSTP national software texhnology park our partner logo, sems partners, smart electric meter system sponsors, brands and collabrations"
-            />
-            <img
-              src="img/8x.png"
-              alt="sems pakistan, semspk, sems pk, sems, smart electric meter system, government of pakistan our sponsor our partner logo, sems partners, smart electric meter system sponsors, brands and collabrations"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Vendor End -->
-    <!-- Footer Start -->
-    <div
-      id="contact"
-      class="container-fluid bg-dark text-light mt-5 wow fadeInUp"
-      data-wow-delay="0.1s"
-    >
-      <div class="container">
-        <div class="row gx-5">
+    <footer id="footer" class="footer">
+      <div class="container footer-top">
+        <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
-            <div
-              class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4"
+            <a
+              href="index.html"
+              class="logo d-flex align-items-center me-auto me-xl-0"
             >
-              <a href="index.html" class="navbar-brand">
-                <h1 class="m-0 text-white">
-                  <i class="fa fa-bolt me-2"></i>SEMS
-                </h1>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-8 col-md-6">
-            <div class="row gx-5">
-              <div class="col-lg-4 col-md-12 pt-5 mb-5">
-                <div
-                  class="section-title section-title-sm position-relative pb-3 mb-4"
-                >
-                  <h3 class="text-light mb-0">Get In Touch</h3>
-                </div>
-                <div class="d-flex mb-2">
-                  <i class="fa fa-arrow-right text-primary me-2"></i>
-                  <p class="mb-0">NSTP Secretariat, NUST Islamabad, Pakistan</p>
-                </div>
-                <div class="d-flex mb-2">
-                  <i class="fa fa-arrow-right text-primary me-2"></i>
-                  <p class="mb-0">info@semspak.com</p>
-                </div>
-                <div class="d-flex mb-2">
-                  <i class="fa fa-arrow-right text-primary me-2"></i>
-                  <p class="mb-0">+92 3433 3788 080</p>
-                </div>
-                <div class="d-flex mt-4">
-                  <!-- <a class="btn btn-primary btn-square me-2" href="#"
-                              ><i class="fab fa-twitter fw-normal"></i
-                              ></a> -->
-                  <a
-                    class="btn btn-primary btn-square me-2"
-                    href="https://www.facebook.com/sems.pakistan?mibextid=kFxxJD"
-                    target="_blank"
-                    ><i class="fab fa-facebook-f fw-normal"></i
-                  ></a>
-                  <a
-                    class="btn btn-primary btn-square me-2"
-                    href="https://www.linkedin.com/company/sems-iot/?viewAsMember=true"
-                    ><i class="fab fa-linkedin-in fw-normal"></i
-                  ></a>
-                  <a
-                    class="btn btn-primary btn-square"
-                    href="https://www.instagram.com/sems.pk"
-                    target="_blank"
-                    ><i class="fab fa-instagram fw-normal"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                <div
-                  class="section-title section-title-sm position-relative pb-3 mb-4"
-                >
-                  <h3 class="text-light mb-0">Quick Links</h3>
-                </div>
-                <div
-                  class="link-animated d-flex flex-column justify-content-start"
-                >
-                  <a class="text-light mb-2" href="#"
-                    ><i class="fa fa-arrow-right text-primary me-2"></i>Home</a
-                  >
-                  <a class="text-light mb-2" href="#about"
-                    ><i class="fa fa-arrow-right text-primary me-2"></i>About
-                    us</a
-                  >
-                  <a class="text-light mb-2" href="#stories"
-                    ><i class="fa fa-arrow-right text-primary me-2"></i>News</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid text-white" style="background: #061429">
-      <div class="container text-center">
-        <div class="row justify-content-end">
-          <div class="col-lg-8 col-md-6">
-            <div
-              class="d-flex align-items-center justify-content-center"
-              style="height: 75px"
-            >
-              <p class="mb-0">
-                &copy;
-                <a class="text-white border-bottom" href="#"
-                  >Smart Electric Meter System</a
-                >. All Rights Reserved.
+              <!-- Uncomment the line below if you also wish to use an image logo -->
+              <!-- <img src="assets/img/logo.png" alt=""> -->
+              <img
+                class="sitename"
+                src="./assets/img/icon-min.png"
+                alt="Smart Electric Meter System"
+                style="
+                  border-radius: 50%;
+                  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+                "
+              />
+              <h1 style="font-weight: bolder">SEMS</h1>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>NSTP Islamabad</p>
+              <p>NICAT Rawalpindi</p>
+              <p class="mt-3">
+                <strong>Phone:</strong> <span>+92 3433 3788 080</span>
               </p>
             </div>
+            <div class="social-links d-flex mt-4">
+              <a href="https://www.facebook.com/sems.pakistan?mibextid=kFxxJD"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com/sems.pk/#"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="https://www.linkedin.com/company/sems-iot/"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About us</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#download">Download</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="contact.html">Electrical Maintenance</a></li>
+              <li><a href="contact.html">Electric Repairs</a></li>
+              <li><a href="contact.html">Industrial Electrical Repairs</a></li>
+              <li><a href="contact.html">Industrial Automation Panels</a></li>
+              <li>
+                <a href="contact.html">Industrial Electricity Maintenance</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Footer End -->
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"
-      ><i class="fa fa-arrow-up"></i
+
+      <div class="container copyright text-center mt-4">
+        <!-- <p>© <span>Copyright</span> <strong class="px-1 sitename">Smart Electric Meter System</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <div class="social-links d-flex mt-4">
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
+      </div> -->
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
     ></a>
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
