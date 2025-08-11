@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>
+    SEMS Pakistan | Smart Electric Meter System | Save Energy & Go Green
+  </title>
+  <meta charset="utf-8" />
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="icon-min.png" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta name="google-site-verification" content="MgUZIri6UUnPezAmDELbotCO0-LZndnEZXFHRERDOpo" />
+  <meta content="SEMS Pakistan sems pk semsPK sems" name="keywords" />
+  <meta name="description"
+    content="SEMS Pakistan offers IoT-based smart electric meters for real-time energy management, cost savings, and eco-friendly electricity usage." />
+  <meta property="og:title" content="SEMS Pakistan - Smart Electric Meter System" />
+  <meta property="og:description"
+    content="Real-time energy management for a greener tomorrow.SEMS Pakistan offers IoT-based smart electric meters for real-time energy management, cost savings, and eco-friendly electricity usage." />
+  <meta property="og:image" content="https://semspk.github.io/sems_web/img/sems_adv1.jpg" />
+  <meta property="og:url" content="https://semspk.github.io/sems_web/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta property="og:type" content="website" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300&display=swap"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Firebase App (the core Firebase SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <style>
+    body {
+      background: #5592ee;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .dashboard {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding: 32px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #002051ab;
+      border-radius: 16px;
+      padding: 24px 32px;
+      min-width: 180px;
+      text-align: center;
+      box-shadow: 0 2px 8px #0002;
+      color: #fff;
+    }
+
+    .card-title {
+      font-size: 1.1em;
+      color: #aab;
+      margin-bottom: 8px;
+    }
+
+    .card-value {
+      font-size: 2.2em;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .chart-container {
+      background: #002051ab;
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 24px;
+      width: 700px;
+      box-shadow: 0 2px 8px #0002;
+    }
+
+    .meter-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .meter-form input[type="text"] {
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 20px 0 0 20px;
+      border: none;
+      outline: none;
+      width: 250px;
+    }
+
+    .meter-form button {
+      padding: 10px 18px;
+      font-size: 1em;
+      border-radius: 0 20px 20px 0;
+      border: none;
+      background: #5592ee;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+      max-height: 48px;
+    }
+
+    .meter-form button:hover {
+      background: #00b6c7;
+    }
+
+    #dashboard-section {
+      display: none;
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: iLanding
+  * Template URL: https://bootstrapmade.com/ilanding-bootstrap-landing-page-template/
+  * Updated: Nov 12 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <img class="sitename" src="./assets/img/icon-min.png" alt="Smart Electric Meter System" style="
+              border-radius: 50%;
+              box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+            " />
+        <h1 style="font-weight: bolder">SEMS</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="contact.html">Contact Us</a>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Hero Section -->
+    <section id="home" class="hero section" style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        ">
+      <div class="container">
+  <form class="meter-form" id="meter-form" onsubmit="return false;">
+    <input type="text" id="meter-id-input" placeholder="Enter Meter ID (e.g. sems001)" required />
+    <button id="meter-submit-btn">Dashboard</button>
+  </form>
+  <div id="dashboard-section">
+    <div class="dashboard">
+      <div class="card">
+        <div class="card-title">Voltage</div>
+        <div class="card-value" id="volt-value">-- V</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Current</div>
+        <div class="card-value" id="amp-value">-- A</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Power</div>
+        <div class="card-value" id="watt-value">-- W</div>
+      </div>
+    </div>
+    <div class="dashboard">
+    <div class="card chart-container">
+      <canvas id="powerChart"></canvas>
+    </div>
+    </div>
+  </div>
+      </div>
+    </section>
+    <!-- /Hero Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <img class="sitename" src="./assets/img/icon-min.png" alt="Smart Electric Meter System" style="
+                  border-radius: 50%;
+                  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+                " />
+            <h1 style="font-weight: bolder">SEMS</h1>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>NSTP Islamabad</p>
+            <p>NICAT Rawalpindi</p>
+            <p class="mt-3">
+              <strong>Phone:</strong> <span>+92 3433 3788 080</span>
+            </p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="https://www.facebook.com/sems.pakistan?mibextid=kFxxJD"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com//#"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/sems-iot/"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="contact.html">Electrical Maintenance</a></li>
+            <li><a href="contact.html">Electric Repairs</a></li>
+            <li><a href="contact.html">Industrial Electrical Repairs</a></li>
+            <li><a href="contact.html">Industrial Automation Panels</a></li>
+            <li>
+              <a href="contact.html">Industrial Electricity Maintenance</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <!-- <p>© <span>Copyright</span> <strong class="px-1 sitename">Smart Electric Meter System</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <div class="social-links d-flex mt-4">
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
+      </div> -->
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/68599ce4290914190fd297e6/1iuf0pnh6';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+    <script>
+    // --- Firebase config (replace with your own) ---
+    const firebaseConfig = {
+      apiKey: "AIzaSyApsrej5_flH-nthILdF0KFULYWu1S2mBc",
+      authDomain: "sems-6fa94.firebaseapp.com",
+      databaseURL: "https://sems-6fa94.firebaseio.com",
+      projectId: "sems-6fa94",
+      storageBucket: "sems-6fa94.appspot.com",
+      messagingSenderId: "904199881266",
+      appId: "1:904199881266:android:c9e0c1325c08632121f22b"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    // --- Chart.js setup ---
+    const ctx = document.getElementById('powerChart').getContext('2d');
+    const chartData = {
+      labels: [],
+      datasets: [
+        {
+          label: 'Amperes (A)',
+          data: [],
+          borderColor: '#00eaff',
+          backgroundColor: 'rgba(0,234,255,0.1)',
+          yAxisID: 'y',
+          tension: 0.4
+        },
+        {
+          label: 'Watts (W)',
+          data: [],
+          borderColor: '#ffb300',
+          backgroundColor: 'rgba(255,179,0,0.1)',
+          yAxisID: 'y1',
+          tension: 0.4
+        }
+      ]
+    };
+    const powerChart = new Chart(ctx, {
+      type: 'line',
+      data: chartData,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { labels: { color: '#fff' } }
+        },
+        scales: {
+          x: { ticks: { color: '#fff' } },
+          y: {
+            type: 'linear',
+            position: 'left',
+            title: { display: true, text: 'Amperes', color: '#fff' },
+            ticks: { color: '#fff' }
+          },
+          y1: {
+            type: 'linear',
+            position: 'right',
+            title: { display: true, text: 'Watts', color: '#fff' },
+            grid: { drawOnChartArea: false },
+            ticks: { color: '#fff' }
+          }
+        }
+      }
+    });
+
+    let currentRef = null;
+
+    document.getElementById('meter-submit-btn').onclick = function () {
+      const meterId = document.getElementById('meter-id-input').value.trim();
+      if (!meterId) return;
+
+      // Hide form, show dashboard
+      document.getElementById('meter-form').style.display = 'none';
+      document.getElementById('dashboard-section').style.display = 'block';
+
+      // Remove previous listener if any
+      if (currentRef) currentRef.off();
+
+      // Listen to new meter id
+      currentRef = db.ref(meterId);
+      currentRef.on('value', (snapshot) => {
+        const data = snapshot.val();
+        if (!data) {
+          document.getElementById('volt-value').textContent = '-- V';
+          document.getElementById('amp-value').textContent = '-- A';
+          document.getElementById('watt-value').textContent = '-- W';
+          chartData.labels = [];
+          chartData.datasets[0].data = [];
+          chartData.datasets[1].data = [];
+          powerChart.update();
+          return;
+        }
+
+        // Update cards
+        document.getElementById('volt-value').textContent = (data.volt ?? '--') + ' V';
+        document.getElementById('amp-value').textContent = (data.amps ?? '--') + ' A';
+        document.getElementById('watt-value').textContent = (data.watt ?? '--') + ' W';
+
+        // Parse hours and days arrays for the chart
+        let hoursArr = [];
+        let ampsArr = [];
+        if (data.hours) {
+          hoursArr = data.hours.split(',').map(x => x.trim()).filter(x => x !== '');
+        }
+        if (data.days) {
+          ampsArr = data.days.split(',').map(x => parseFloat(x.trim())).filter(x => !isNaN(x));
+        } else if (data.amps) {
+          ampsArr = [parseFloat(data.amps)];
+        }
+
+        // If hoursArr and ampsArr are not the same length, adjust
+        const minLen = Math.min(hoursArr.length, ampsArr.length);
+        hoursArr = hoursArr.slice(0, minLen);
+        ampsArr = ampsArr.slice(0, minLen);
+
+        // Calculate watts for each amp value
+        const volt = parseFloat(data.volt) || 230;
+        const wattsArr = ampsArr.map(a => a * volt);
+
+        // Update chart
+        chartData.labels = hoursArr.length ? hoursArr : ampsArr.map((_, i) => i + 1);
+        chartData.datasets[0].data = ampsArr;
+        chartData.datasets[1].data = wattsArr;
+        powerChart.update();
+      });
+    };
+  </script>
+  <!--End of Tawk.to Script-->
+</body>
+
+</html>

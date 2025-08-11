@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Energy Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Firebase App (the core Firebase SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <style>
+    body {
+      background: #181943;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .dashboard {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding: 32px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #23255a;
+      border-radius: 16px;
+      padding: 24px 32px;
+      min-width: 180px;
+      text-align: center;
+      box-shadow: 0 2px 8px #0002;
+    }
+
+    .card-title {
+      font-size: 1.1em;
+      color: #aab;
+      margin-bottom: 8px;
+    }
+
+    .card-value {
+      font-size: 2.2em;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .chart-container {
+      background: #23255a;
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 24px;
+      width: 700px;
+      box-shadow: 0 2px 8px #0002;
+    }
+
+    .meter-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .meter-form input[type="text"] {
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 8px 0 0 8px;
+      border: none;
+      outline: none;
+      width: 200px;
+    }
+
+    .meter-form button {
+      padding: 10px 18px;
+      font-size: 1em;
+      border-radius: 0 8px 8px 0;
+      border: none;
+      background: #00eaff;
+      color: #181943;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .meter-form button:hover {
+      background: #00b6c7;
+    }
+
+    #dashboard-section {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <form class="meter-form" id="meter-form" onsubmit="return false;">
+    <input type="text" id="meter-id-input" placeholder="Enter Meter ID (e.g. sems001)" required />
+    <button id="meter-submit-btn">Show Dashboard</button>
+  </form>
+  <div id="dashboard-section">
+    <div class="dashboard">
+      <div class="card">
+        <div class="card-title">Voltage</div>
+        <div class="card-value" id="volt-value">-- V</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Current</div>
+        <div class="card-value" id="amp-value">-- A</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Power</div>
+        <div class="card-value" id="watt-value">-- W</div>
+      </div>
+    </div>
+    <div class="dashboard">
+    <div class="card chart-container">
+      <canvas id="powerChart"></canvas>
+    </div>
+    </div>
+  </div>
+  <script>
+    // --- Firebase config (replace with your own) ---
+    const firebaseConfig = {
+      apiKey: "AIzaSyApsrej5_flH-nthILdF0KFULYWu1S2mBc",
+      authDomain: "sems-6fa94.firebaseapp.com",
+      databaseURL: "https://sems-6fa94.firebaseio.com",
+      projectId: "sems-6fa94",
+      storageBucket: "sems-6fa94.appspot.com",
+      messagingSenderId: "904199881266",
+      appId: "1:904199881266:android:c9e0c1325c08632121f22b"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    // --- Chart.js setup ---
+    const ctx = document.getElementById('powerChart').getContext('2d');
+    const chartData = {
+      labels: [],
+      datasets: [
+        {
+          label: 'Amperes (A)',
+          data: [],
+          borderColor: '#00eaff',
+          backgroundColor: 'rgba(0,234,255,0.1)',
+          yAxisID: 'y',
+          tension: 0.4
+        },
+        {
+          label: 'Watts (W)',
+          data: [],
+          borderColor: '#ffb300',
+          backgroundColor: 'rgba(255,179,0,0.1)',
+          yAxisID: 'y1',
+          tension: 0.4
+        }
+      ]
+    };
+    const powerChart = new Chart(ctx, {
+      type: 'line',
+      data: chartData,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { labels: { color: '#fff' } }
+        },
+        scales: {
+          x: { ticks: { color: '#fff' } },
+          y: {
+            type: 'linear',
+            position: 'left',
+            title: { display: true, text: 'Amperes', color: '#fff' },
+            ticks: { color: '#fff' }
+          },
+          y1: {
+            type: 'linear',
+            position: 'right',
+            title: { display: true, text: 'Watts', color: '#fff' },
+            grid: { drawOnChartArea: false },
+            ticks: { color: '#fff' }
+          }
+        }
+      }
+    });
+
+    let currentRef = null;
+
+    document.getElementById('meter-submit-btn').onclick = function () {
+      const meterId = document.getElementById('meter-id-input').value.trim();
+      if (!meterId) return;
+
+      // Hide form, show dashboard
+      document.getElementById('meter-form').style.display = 'none';
+      document.getElementById('dashboard-section').style.display = 'block';
+
+      // Remove previous listener if any
+      if (currentRef) currentRef.off();
+
+      // Listen to new meter id
+      currentRef = db.ref(meterId);
+      currentRef.on('value', (snapshot) => {
+        const data = snapshot.val();
+        if (!data) {
+          document.getElementById('volt-value').textContent = '-- V';
+          document.getElementById('amp-value').textContent = '-- A';
+          document.getElementById('watt-value').textContent = '-- W';
+          chartData.labels = [];
+          chartData.datasets[0].data = [];
+          chartData.datasets[1].data = [];
+          powerChart.update();
+          return;
+        }
+
+        // Update cards
+        document.getElementById('volt-value').textContent = (data.volt ?? '--') + ' V';
+        document.getElementById('amp-value').textContent = (data.amps ?? '--') + ' A';
+        document.getElementById('watt-value').textContent = (data.watt ?? '--') + ' W';
+
+        // Parse hours and days arrays for the chart
+        let hoursArr = [];
+        let ampsArr = [];
+        if (data.hours) {
+          hoursArr = data.hours.split(',').map(x => x.trim()).filter(x => x !== '');
+        }
+        if (data.days) {
+          ampsArr = data.days.split(',').map(x => parseFloat(x.trim())).filter(x => !isNaN(x));
+        } else if (data.amps) {
+          ampsArr = [parseFloat(data.amps)];
+        }
+
+        // If hoursArr and ampsArr are not the same length, adjust
+        const minLen = Math.min(hoursArr.length, ampsArr.length);
+        hoursArr = hoursArr.slice(0, minLen);
+        ampsArr = ampsArr.slice(0, minLen);
+
+        // Calculate watts for each amp value
+        const volt = parseFloat(data.volt) || 230;
+        const wattsArr = ampsArr.map(a => a * volt);
+
+        // Update chart
+        chartData.labels = hoursArr.length ? hoursArr : ampsArr.map((_, i) => i + 1);
+        chartData.datasets[0].data = ampsArr;
+        chartData.datasets[1].data = wattsArr;
+        powerChart.update();
+      });
+    };
+  </script>
+</body>
+
+</html>
