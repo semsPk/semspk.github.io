@@ -738,15 +738,19 @@ section,
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, transparent, white);
+  background: linear-gradient(to bottom, transparent 90%, white);
   opacity: 1; /* Adjust the opacity of the gradient */
   pointer-events: none; /* Ensures the gradient doesn't block other interactions */
 }
 
-@media (max-width: 1000px) {
-  .video-waves {
-    width: auto;
-  }
+@media (max-width: 790px) {
+.video-waves {
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+  left: -50%;
+}
 }
 
 .candely {
@@ -803,7 +807,7 @@ section,
   color: var(--accent-color);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 790px) {
   .hero .hero-content {
     text-align: center;
     margin-bottom: 3rem;
@@ -811,6 +815,7 @@ section,
 
   .hero .hero-content h1 {
     font-size: 2.5rem;
+    padding-bottom: 90%;
   }
 
   .hero .hero-content .hero-buttons {
